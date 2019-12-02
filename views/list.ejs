@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <% if (name === "Sunday" || name === "Saturday") { %>
+                <h1><%= name %></h1>
+                <h2>DATE : <%= currentDate %></h2>
+                <h5>It's Weekend</h5>
+                <%} else { %>
+                <h1><%= name %></h1>
+                <h4>DATE : <%= currentDate %> - <%= currentDate %> - <%= currentYear %></h4>
+                <%}%>
+            </div>
+            <div class="col-md-6">
+                <h1>To Do List</h1>
+                <ul>
+                    <% for (var i = 0; i < toDoArray.length; i++) { %>
+                        <li><%=toDoArray[i]%></li>
+                    <%}%>
+                    <form action="/" method="POST">
+                        <input type="text" placeholder="Task" name="toDo">
+                        <button type="submit" name="button">Add</button>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <style>
+        .container{
+            margin: 10% 15%;
+        }
+        body{
+            background: linear-gradient(to right, #9d50bb, #6e48aa);
+        }
+    </style>
+</html>
