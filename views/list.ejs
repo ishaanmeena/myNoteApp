@@ -29,8 +29,8 @@
                         <li><%=toDoArray[i]%></li>
                     <%}%>
                     <form action="/" method="POST">
-                        <input type="text" placeholder="Task" name="toDo">
-                        <button type="submit" name="button">Add</button>
+                        <input type="text" name="toDo">
+                        <button type="submit" name="button" class="btn-dark">Add</button>
                     </form>
                 </ul>
             </div>
@@ -45,7 +45,17 @@
             margin: 10% 15%;
         }
         body{
-            background: linear-gradient(to right, #9d50bb, #6e48aa);
+            background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+            height: 100vh;
+        }
+        input[type="text"]
+        {
+            background: rgba(0, 0, 0, 0);
+            border: 1px black solid;
+            outline: none;
+        }
+        ul {
+        list-style-type: none;
         }
     </style>
 </html>
